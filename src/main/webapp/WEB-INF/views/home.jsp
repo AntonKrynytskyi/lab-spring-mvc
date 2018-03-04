@@ -8,7 +8,7 @@ type="text/css"
 href="<c:url value="/resources/style.css" />" >
 </head>
 <body>
-<h1>Welcome to Spittr</h1>
+<h1>Rick and Morty at the Spring MVC... Check this code!</h1>
 <a href="<c:url value="/spittles" />">Spittles</a> |
 <a href="<c:url value="/spitter/register" />">Register</a>
 </body>

@@ -8,10 +8,12 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import spittr.data.SpittleRepository;
+import spittr.data.SpittleRepositoryImpl;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("spittr.web")
+@ComponentScan(value = {"spittr.web", "spittr.data"})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Bean
@@ -23,6 +25,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         resolve.setExposeContextBeansAsAttributes(true);
 
         return resolve;
+    }
+
+    @Bean
+    public SpittleRepository spittleRepository() {
+        return new SpittleRepositoryImpl();
     }
 
     @Override
