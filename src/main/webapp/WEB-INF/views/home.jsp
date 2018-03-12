@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="s" %>
 <%@ page session="false" %>
 <html>
 <head>
@@ -8,8 +9,8 @@ type="text/css"
 href="<c:url value="/resources/style.css" />" >
 </head>
 <body>
-<h1>Rick and Morty at the Spring MVC... Check this code!</h1>
-<a href="<c:url value="/spittles" />">Spittles</a> |
-<a href="<c:url value="/spitter/register" />">Register</a>
+<h1><s:message code="spitter.welcome" /></h1>
+<a href="<c:url value="/spittles" />"><s:message code="spitter.spittles"/></a> |
+<a href="<c:url value="/spitter/register" />"><s:message code="spitter.register"/></a>
 </body>
 </html>
