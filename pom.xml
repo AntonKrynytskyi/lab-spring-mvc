@@ -9,9 +9,10 @@
 
     <properties>
         <jdk.version>1.8</jdk.version>
-        <spring.version>4.0.7.RELEASE</spring.version>
+        <spring.version>4.3.4.RELEASE</spring.version>
         <jstl.version>1.2</jstl.version>
         <servle.api.version>3.1.0</servle.api.version>
+        <apache-tiles.version>3.0.7</apache-tiles.version>
     </properties>
 
     <dependencies>
@@ -43,7 +44,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.0.7.RELEASE</version>
+            <version>4.3.4.RELEASE</version>
             <scope>test</scope>
         </dependency>
 
@@ -61,6 +62,13 @@
             <artifactId>hamcrest-library</artifactId>
             <version>1.3</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- Apache Tiles -->
+        <dependency>
+        <groupId>org.apache.tiles</groupId>
+        <artifactId>tiles-jsp</artifactId>
+        <version>${apache-tiles.version}</version>
         </dependency>
 
         <dependency>

@@ -33,7 +33,7 @@ public class SpitterController {
         return "registerForm";
     }
 
-    @RequestMapping(value = "/register", method = POST)
+    @RequestMapping(value = {"/register", "registerForm"}, method = POST)
     public String processRegistration(
             @Valid Spitter spitter, Errors errors) {
 
@@ -46,7 +46,7 @@ public class SpitterController {
                 spitter.getUsername();
     }
 
-    @RequestMapping(value = "/{username}", method = GET)
+    @RequestMapping(value = {"/{username}", "/profile/{username}"}, method = GET)
     public String showSpitterProfile(
             @PathVariable String username, Model model) {
         Spitter spitter = spittleRepository.findByUsername(username);

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @Controller
-@RequestMapping(value = {"/", "homepage"})
+@RequestMapping(value = {"/", "homepage","home"})
 public class HomeController {
 
     @RequestMapping(method = GET)
